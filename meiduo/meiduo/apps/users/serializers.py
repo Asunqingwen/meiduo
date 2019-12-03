@@ -11,8 +11,9 @@ import re
 
 from django_redis import get_redis_connection
 from rest_framework import serializers
+from rest_framework_jwt.settings import api_settings
 
-from meiduo.apps.users.models import User
+from .models import User, Address
 
 
 class CreateUserSerializer(serializers.ModelSerializer):
@@ -95,4 +96,66 @@ class CreateUserSerializer(serializers.ModelSerializer):
 		# 调用django的认证系统加密密码
 		user.set_password(validated_data['password'])
 		user.save()
+
+		# 补充生成记录登录状态的token
+		jwt_payload_handler = api_settings.JWT_PAYLOAD_HANDLER
+		jwt_encode_handler = api_settings.JWT_ENCODE_HANDLER
+		payload = jwt_payload_handler(user)
+		token = jwt_encode_handler(payload)
+		user.token = token
 		return user
+
+
+class UserDetailSerializer(serializers.ModelSerializer):
+	"""
+	用户详情序列化器
+	"""
+
+	class Meta:
+		model = User
+		fields = ('id', 'username', 'mobile', 'email', 'email_active')
+
+
+class UserAddressSerializer(serializers.ModelSerializer):
+	"""
+	用户地址序列化器
+	"""
+	province = serializers.StringRelatedField(read_only=True)
+	city = serializers.StringRelatedField(read_only=True)
+	district = serializers.StringRelatedField(read_only=True)
+	province_id = serializers.IntegerField(label='省ID', required=True)
+	city_id = serializers.IntegerField(label='市ID', required=True)
+	district_id = serializers.IntegerField(label='区ID', required=True)
+
+	class Meta:
+		model = Address
+		exclude = ('user', 'is_deleted', 'create_time', 'update_time')
+
+	def validate_mobile(self, value):
+		"""
+		验证手机号码
+		:param value:
+		:return:
+		"""
+		if not re.match(r'^1[3-9]\d{9}$', value):
+			raise serializers.ValidationError('手机号格式错误')
+		return value
+
+	def create(self, validated_data):
+		"""
+		保存
+		:param validated_data:
+		:return:
+		"""
+		validated_data['user'] = self.context['request'].user
+		return super(UserAddressSerializer, self).create(validated_data)
+
+
+class AddressTitleSerializer(serializers.ModelSerializer):
+	"""
+	地址标题
+	"""
+
+	class Meta:
+		model = Address
+		fields = ('title',)

@@ -1,0 +1,46 @@
+INFO 2019-12-03 15:01:59,543 autoreload 597 Watching for file changes with StatReloader
+INFO 2019-12-03 15:02:05,253 basehttp 154 "GET / HTTP/1.1" 200 16286
+INFO 2019-12-03 15:02:05,826 basehttp 154 "GET /static/admin/css/fonts.css HTTP/1.1" 200 423
+INFO 2019-12-03 15:02:06,056 basehttp 154 "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 200 86184
+INFO 2019-12-03 15:02:06,067 basehttp 154 "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200 85876
+INFO 2019-12-03 15:02:06,093 basehttp 154 "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 85692
+WARNING 2019-12-03 15:02:06,212 log 228 Not Found: /favicon.ico
+WARNING 2019-12-03 15:02:06,220 basehttp 154 "GET /favicon.ico HTTP/1.1" 404 1972
+INFO 2019-12-03 15:03:10,314 autoreload 217 D:\Python\meiduo\meiduo\meiduo\urls.py changed, reloading.
+INFO 2019-12-03 15:03:11,685 autoreload 597 Watching for file changes with StatReloader
+INFO 2019-12-03 15:08:53,776 autoreload 597 Watching for file changes with StatReloader
+INFO 2019-12-03 15:13:26,928 autoreload 217 D:\Python\meiduo\meiduo\meiduo\settings\dev.py changed, reloading.
+INFO 2019-12-03 15:13:28,146 autoreload 597 Watching for file changes with StatReloader
+INFO 2019-12-03 15:13:51,028 autoreload 597 Watching for file changes with StatReloader
+INFO 2019-12-03 15:14:14,443 autoreload 217 D:\Python\meiduo\meiduo\meiduo\settings\dev.py changed, reloading.
+INFO 2019-12-03 15:14:16,038 autoreload 597 Watching for file changes with StatReloader
+INFO 2019-12-03 15:14:27,221 autoreload 217 D:\Python\meiduo\meiduo\meiduo\settings\dev.py changed, reloading.
+INFO 2019-12-03 15:14:28,717 autoreload 597 Watching for file changes with StatReloader
+INFO 2019-12-03 15:14:34,149 autoreload 217 D:\Python\meiduo\meiduo\meiduo\settings\dev.py changed, reloading.
+INFO 2019-12-03 15:14:35,432 autoreload 597 Watching for file changes with StatReloader
+INFO 2019-12-03 15:15:48,269 autoreload 217 D:\Python\meiduo\meiduo\meiduo\settings\dev.py changed, reloading.
+INFO 2019-12-03 15:15:49,645 autoreload 597 Watching for file changes with StatReloader
+INFO 2019-12-03 15:18:47,088 autoreload 597 Watching for file changes with StatReloader
+INFO 2019-12-03 15:19:22,908 autoreload 597 Watching for file changes with StatReloader
+INFO 2019-12-03 15:19:45,618 autoreload 597 Watching for file changes with StatReloader
+WARNING 2019-12-03 15:19:49,157 log 228 Not Found: /
+WARNING 2019-12-03 15:19:49,158 basehttp 154 "GET / HTTP/1.1" 404 2017
+WARNING 2019-12-03 15:19:54,559 log 228 Not Found: /users/
+WARNING 2019-12-03 15:19:54,561 basehttp 154 "GET /users/ HTTP/1.1" 404 2053
+INFO 2019-12-03 15:22:43,961 autoreload 217 D:\Python\meiduo\meiduo\meiduo\urls.py changed, reloading.
+INFO 2019-12-03 15:22:45,263 autoreload 597 Watching for file changes with StatReloader
+WARNING 2019-12-03 15:22:48,196 log 228 Method Not Allowed: /users/
+WARNING 2019-12-03 15:22:48,197 basehttp 154 "GET /users/ HTTP/1.1" 405 8915
+INFO 2019-12-03 15:22:48,284 basehttp 154 "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+INFO 2019-12-03 15:22:48,294 basehttp 154 "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3385
+INFO 2019-12-03 15:22:48,317 basehttp 154 "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3597
+INFO 2019-12-03 15:22:48,322 basehttp 154 "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1131
+INFO 2019-12-03 15:22:48,353 basehttp 154 "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121457
+INFO 2019-12-03 15:22:48,367 basehttp 154 "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1719
+INFO 2019-12-03 15:22:48,375 basehttp 154 "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 37608
+INFO 2019-12-03 15:22:48,391 basehttp 154 "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+INFO 2019-12-03 15:22:48,418 basehttp 154 "GET /static/rest_framework/js/jquery-3.4.1.min.js HTTP/1.1" 200 88145
+INFO 2019-12-03 15:22:48,444 basehttp 154 "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1268
+INFO 2019-12-03 15:22:48,487 basehttp 154 "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+INFO 2019-12-03 15:24:12,572 autoreload 217 D:\Python\meiduo\meiduo\meiduo\apps\users\views.py changed, reloading.
+INFO 2019-12-03 15:24:13,818 autoreload 597 Watching for file changes with StatReloader
