@@ -6,7 +6,7 @@ verify_ssl = true
 [dev-packages]
 
 [packages]
-django = "*"
+django = "==2.2"
 djangorestframework = "*"
 django-redis = "*"
 psycopg2 = "*"
@@ -14,6 +14,10 @@ serializers = "*"
 celery = "*"
 djangorestframework-jwt = "*"
 django-cors-headers = "*"
+mutagen = "*"
+requests = "*"
+django-ckeditor = "*"
+django-crontab = "*"
 drf-extensions = "*"
 
 [requires]

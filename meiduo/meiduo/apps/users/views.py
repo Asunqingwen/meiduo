@@ -1,10 +1,11 @@
 # Create your views here.
 from rest_framework import mixins, status
 from rest_framework.decorators import action
-from rest_framework.generics import CreateAPIView, RetrieveAPIView, GenericAPIView
+from rest_framework.generics import CreateAPIView, RetrieveAPIView
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.views import APIView
+from rest_framework.viewsets import GenericViewSet
 
 from . import serializers, constants
 from .models import User
@@ -75,7 +76,7 @@ class MobileCountView(APIView):
 		return Response(data)
 
 
-class AddressViewSet(mixins.CreateModelMixin, mixins.UpdateModelMixin, GenericAPIView):
+class AddressViewSet(mixins.CreateModelMixin, mixins.UpdateModelMixin, GenericViewSet):
 	"""
 	用户地址新增与修改
 	"""
@@ -138,7 +139,7 @@ class AddressViewSet(mixins.CreateModelMixin, mixins.UpdateModelMixin, GenericAP
 		return Response(status=status.HTTP_204_NO_CONTENT)
 
 	# put /addresses/pk/status/
-	@action(method=['put'], detail=True)
+	@action(methods=['put'], detail=True)
 	def status(self, request, pk=None):
 		"""
 		设置默认地址

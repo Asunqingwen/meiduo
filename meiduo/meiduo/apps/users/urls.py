@@ -13,13 +13,14 @@ from rest_framework_jwt.views import obtain_jwt_token
 
 from . import views
 
-router = routers.DefaultRouter()
-router.register(r'address', views.AddressViewSet, base_name='addresses')
-
 urlpatterns = [
 	path('users/', views.UserRegisterView.as_view()),
 	path('usernames/<str:username>/count/)', views.UsernameCountView.as_view()),
 	path('mobiles/<int:mobile>/count/', views.MobileCountView.as_view()),
 	path('authorizations/', obtain_jwt_token),  # 登录认证
 ]
+
+router = routers.DefaultRouter()
+router.register(r'addresses', views.AddressViewSet, base_name='addresses')
+
 urlpatterns += router.urls

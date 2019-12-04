@@ -44,3 +44,4 @@ INFO 2019-12-03 15:22:48,444 basehttp 154 "GET /static/rest_framework/js/default
 INFO 2019-12-03 15:22:48,487 basehttp 154 "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
 INFO 2019-12-03 15:24:12,572 autoreload 217 D:\Python\meiduo\meiduo\meiduo\apps\users\views.py changed, reloading.
 INFO 2019-12-03 15:24:13,818 autoreload 597 Watching for file changes with StatReloader
+INFO 2019-12-04 14:46:56,890 autoreload 598 Watching for file changes with StatReloader
